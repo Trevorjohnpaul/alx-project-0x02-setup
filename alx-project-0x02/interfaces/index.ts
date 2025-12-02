@@ -22,10 +22,11 @@ export interface IButtonProps {
   className?: string;
 }
 
-export interface ICardProps {
+export interface CardProps {
   title: string;
   content: string;
 }
+
 
 export interface IPostCardProps {
   post: IPost;
