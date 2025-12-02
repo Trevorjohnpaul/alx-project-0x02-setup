@@ -1,4 +1,3 @@
-// pages/users.tsx
 import React from "react";
 import Header from "@/components/layout/Header";
 import UserCard from "@/components/common/UserCard";
@@ -29,8 +28,7 @@ const UsersPage: React.FC<UsersPageProps> = ({ users }) => {
   );
 };
 
-// Fetch users from JSONPlaceholder at build time
-export const getStaticProps = async () => {
+export async function getStaticProps() {
   try {
     const res = await fetch("https://jsonplaceholder.typicode.com/users");
     const data = await res.json();
@@ -50,6 +48,6 @@ export const getStaticProps = async () => {
       props: { users: [] },
     };
   }
-};
+}
 
 export default UsersPage;
